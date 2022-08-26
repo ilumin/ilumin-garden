@@ -4,30 +4,34 @@ module.exports = {
   trailingSlash: 'never', // Remove all trailing slashes on each URL, e.g. /x/ to /x
 
   siteMetadata: {
-    title: `Gatsby Garden`,
-    description: `A Digital Garden tended by Gatsby`,
+    title: `ilumin's Garden`,
+    description: `A Digital Garden by Teerasak Vichadee`,
 
-    // siteUrl: `https://yoursite.com/notes/`, // URL at which your site will be published. This should be present if you want RSS feed.
-    // headerMenu: [ // Top Navbar items
-    //   {type: 'page', item: '', title: 'Home'}, // Type can be 'page', 'note', 'tag', or 'link'
-    //   {type: 'page', item: 'sitemap', title: 'Sitemap'},
-    //   {type: 'page', item: 'rss.xml', title: 'RSS'},
-    //   {
-    //     type: 'page', item: 'tags', title: 'Tags',
-    //     menu: [ // Only one level depth, please.
-    //       {type: 'tag',item: 'zettelkasten'},
-    //       {type: 'tag',item: 'philosophy'},
-    //       {type: 'tag',item: 'psychology'},
-    //       {type: 'tag',item: 'rationality'},
-    //     ]
-    //   },
-    // ],
+    siteUrl: `https://ilumin.dev/`, // URL at which your site will be published. This should be present if you want RSS feed.
+    headerMenu: [
+      // Top Navbar items
+      { type: 'page', item: '', title: 'Home' }, // Type can be 'page', 'note', 'tag', or 'link'
+      { type: 'page', item: 'sitemap', title: 'Sitemap' },
+      // {type: 'page', item: 'rss.xml', title: 'RSS'},
+      // {
+      //   type: 'page',
+      //   item: 'tags',
+      //   title: 'Tags',
+      //   menu: [
+      //     // Only one level depth, please.
+      //     { type: 'tag', item: 'zettelkasten' },
+      //     { type: 'tag', item: 'philosophy' },
+      //     { type: 'tag', item: 'psychology' },
+      //     { type: 'tag', item: 'rationality' },
+      //   ],
+      // },
+    ],
 
     // menu: [ // This is the Table of Contents that comes in the home page if a Home Note is not specified. It can be much longer than the header menu.
     //   ... Same structure as headerMenu. You can have any depth level - multiple menus can be nested.
     // ],
 
-    hoverPreview: true // If true, shows the content of an internal link in a tooltip when hovering over the link.
+    hoverPreview: true, // If true, shows the content of an internal link in a tooltip when hovering over the link.
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -106,20 +110,20 @@ module.exports = {
           {
             resolve: 'gatsby-remark-obsidian',
             options: {
-              titleToURL: require(`${__dirname}/src/utils/make-slug.js`)
-            }
-          }
+              titleToURL: require(`${__dirname}/src/utils/make-slug.js`),
+            },
+          },
         ],
       },
     },
 
-    // {
-    //   resolve: `gatsby-plugin-google-fonts`,
-    //   options: {
-    //     fonts: [`IBM Plex Sans:ital,wght@0,400;0,600;1,400;1,600`],
-    //     display: `swap`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`IBM Plex Sans:ital,wght@0,400;0,600;1,400;1,600`],
+        display: `swap`,
+      },
+    },
 
     {
       resolve: `gatsby-plugin-purgecss`,
@@ -150,8 +154,8 @@ module.exports = {
         // Provide options to the engine. This is optional and only recommended for advanced users.
         // Note: Only the flexsearch engine supports options.
         engineOptions: {
-            present: 'speed',
-            tokenize: 'forward'
+          present: 'speed',
+          tokenize: 'forward',
         },
 
         // GraphQL query used to fetch all data for the search index. This is required.
