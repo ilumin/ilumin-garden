@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-garden",
-  "version": "2.2.2",
-  "description": "Gatsby Garden lets you create a static html version of your markdown notes. You can convert your Obsidian Zettelkasten Notes into a public Digital Garden.",
-  "homepage": "https://github.com/binnyva/gatsby-garden",
+  "name": "ilumin-garden",
+  "version": "0.0.1",
+  "description": "ilumin garden",
+  "homepage": "https://github.com/ilumin/ilumin-garden",
   "keywords": [
     "markdown",
     "mdx",
@@ -14,7 +14,7 @@
     "digital-garden",
     "obsidian"
   ],
-  "author": "Binny V A <binnyva@gmail.com>",
+  "author": "Teerasak Vichadee <iolumin@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -61,9 +61,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/binnyva/gatsby-garden"
+    "url": "https://github.com/ilumin/ilumin-garden"
   },
   "bugs": {
-    "url": "https://github.com/binnyva/gatsby-garden/issues"
+    "url": "https://github.com/ilumin/ilumin-garden/issues"
   }
 }
